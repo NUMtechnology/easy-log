@@ -5,6 +5,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "dependencies": {
+    "pino": "^7.6.5"
   },
   "devDependencies": {
     "@tsconfig/node10": "^1.0.7",
