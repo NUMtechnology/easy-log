@@ -1,6 +1,6 @@
 {
   "name": "num-easy-log",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Wrapper for a logging package.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -43,7 +43,7 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/NUMtechnology/easy-logger"
+    "url": "https://github.com/NUMtechnology/easy-log"
   },
   "files": [
     "dist/**/*",

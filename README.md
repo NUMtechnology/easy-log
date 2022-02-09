@@ -7,7 +7,7 @@ By default logging uses `pino`, but `pino` can be bypassed by calling `setConsol
 `npm install num-easy-log`
 
 ```JavaScript
-const easylog = require('easy-log');
+const easylog = require('num-easy-log');
 
 const log = easylog.log;
 
