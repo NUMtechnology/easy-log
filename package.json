@@ -1,0 +1,51 @@
+{
+  "name": "easy-log",
+  "version": "0.0.1",
+  "description": "Wrapper for a logging package.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@tsconfig/node10": "^1.0.7",
+    "@types/chai": "^4.2.11",
+    "@types/mocha": "^7.0.2",
+    "@types/node": "^14.0.13",
+    "chai": "^4.2.0",
+    "deep-eql": "^4.0.0",
+    "fs": "0.0.1-security",
+    "mocha": "^8.1.3",
+    "prettier": "^2.3.0",
+    "ts-loader": "^7.0.5",
+    "ts-node": "^8.10.2",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.3.5",
+    "webpack": "^5.23.0",
+    "webpack-cli": "^4.7.0"
+  },
+  "scripts": {
+    "test": "mocha --require ts-node/register 'test/**/*.ts'",
+    "debug": "mocha --require ts-node/register 'test/**/*.ts'",
+    "debug-trace": "mocha --trace-warnings --require ts-node/register 'test/**/*.ts'",
+    "version": "git add -A .",
+    "pretest": "npm run format && npm run lint && npm run build",
+    "preversion": "npm run format && npm run lint && npm run doc && npm run build",
+    "build": "tsc",
+    "doc": "typedoc",
+    "format": "prettier --write \"**/*.ts\"",
+    "lint": "tslint --force -p tsconfig.json",
+    "prepublish": "npm test && webpack",
+    "publish": "git push && git push --tags --force"
+  },
+  "author": "NUM Technology Ltd",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NUMtechnology/easy-logger"
+  },
+  "files": [
+    "dist/**/*",
+    "index.js"
+  ]
+}
