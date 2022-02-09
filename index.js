@@ -1,3 +1,6 @@
+const logger = require('./dist/Logger');
+
 module.exports = {
-  log: logger
+  log: logger,
+  Level: logger.Level
 };

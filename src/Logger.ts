@@ -1,4 +1,4 @@
-import { pino } from 'pino';
+import pino from 'pino';
 
 export interface Logger {
   setConsoleOnly(consoleOnly: boolean);
@@ -71,7 +71,7 @@ class LoggerImpl implements Logger {
   info(m: string): void {
     if (this.options.level <= Level.info) {
       if (this.options.consoleOnly) {
-        console.log(m);
+        console.info(m);
       } else {
         internalLogger.info(m);
       }
@@ -81,7 +81,7 @@ class LoggerImpl implements Logger {
   warn(m: string): void {
     if (this.options.level <= Level.warn) {
       if (this.options.consoleOnly) {
-        console.log(m);
+        console.warn(m);
       } else {
         internalLogger.warn(m);
       }
@@ -91,7 +91,7 @@ class LoggerImpl implements Logger {
   error(m: string): void {
     if (this.options.level <= Level.error) {
       if (this.options.consoleOnly) {
-        console.log(m);
+        console.error(m);
       } else {
         internalLogger.error(m);
       }
@@ -101,7 +101,7 @@ class LoggerImpl implements Logger {
   fatal(m: string): void {
     if (this.options.level <= Level.fatal) {
       if (this.options.consoleOnly) {
-        console.log(m);
+        console.error(m);
       } else {
         internalLogger.fatal(m);
       }
@@ -143,5 +143,3 @@ class LoggerImpl implements Logger {
 }
 
 export const logger: Logger = new LoggerImpl(new Options(false, Level.info));
-
-export const createLogger = (options: Options): Logger => new LoggerImpl(options);

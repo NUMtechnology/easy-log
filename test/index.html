@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+  <title>Logger Testbed</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="../dist/bundle.js"></script>
+</head>
+
+<body>
+  <div class=outer>
+    <h1>Logger Testbed</h1>
+    <p>See console.</p>
+    <script>
+
+          window.EasyLog.log.info('Info log 1.');
+          window.EasyLog.log.setLevel(EasyLog.Level.error);
+          window.EasyLog.log.setConsoleOnly(true);
+          window.EasyLog.log.info('Info log 2.');
+          window.EasyLog.log.error('Error log 1.');
+
+    </script>
+
+</body>
+
+</html>

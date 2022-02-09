@@ -1,3 +1,3 @@
-import { logger } from './Logger';
+import { logger, Level } from './Logger';
 
-export const log = logger;
+export { logger as log, Level };

@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+textarea {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  width: 100%;
+}
+
+.outer {
+  width: 100%;
+}
+.rawdata {
+  float: left;
+  width: 50%;
+  padding-right: 5%;
+}
+
+.mapping {
+  float: left;
+  width: 50%;
+  padding-right: 5%;
+}
+
+.result {
+  float: left;
+  width: 100%;
+  padding-right: 5%;
+}
+
+.errors {
+  color: red;
+}
