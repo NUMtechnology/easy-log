@@ -4,6 +4,8 @@ A simple wrapper for logging packages that supports switching to simple console 
 
 By default logging uses `pino`, but `pino` can be bypassed by calling `setConsoleOnly(true)`
 
+`npm install num-easy-log`
+
 ```JavaScript
 const easylog = require('easy-log');
 

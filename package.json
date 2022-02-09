@@ -1,5 +1,5 @@
 {
-  "name": "easy-log",
+  "name": "num-easy-log",
   "version": "0.0.1",
   "description": "Wrapper for a logging package.",
   "main": "dist/index.js",
